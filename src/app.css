@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.quiz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #e18bde;
+}
+.qes{
+    font-size: larger;
+}
+.qestions{
+    width: 550px;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #97cfba;
+    box-shadow: 0px 0px 13px 2px black;
+}
+.quizbutton{
+    margin: 10px 0px;
+    padding: 8px 24px;
+    border-radius: 11px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.quizbutton:hover{
+    background-color: rgb(107, 108, 109);
+}
+.options{
+    display: grid;
+    padding: 25px 0;
+    grid-gap: 10px; 
+}
+.optionBox{
+    padding: 5px;
+    font-size: large;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: white;
+}
+    
+.length{
+    display: flex;
+    justify-content: space-between;
+}
+.buttonsNextBack{
+    display: flex;
+    justify-content: space-between;
+}
+.hide{
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .overlay-content {
+    max-width: 400px;
+    padding: 20px;
+background-color: rgb(208, 235, 226);
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .overlay h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .overlay p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .overlay button {
+    padding: 10px 20px;
+    background-color: #4f606d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .overlay button:hover {
+    background-color: #394952;
+  }
+
+  .closerestartbtn{
+    display: flex;
+    justify-content: space-between;
+  }
