@@ -64,7 +64,9 @@ function App() {
   const [data, setdata] = useState(quizApp[0])
   const [showOverlay, setShowOverlay] = useState(false);
   const [index, setindex] = useState(0);
+  const [selectedOption, setSelectedOption] = useState('');
   function chnagequestion(updatedindex) {
+    setSelectedOption("")
     setindex(updatedindex);
     setdata(quizApp[updatedindex]);
     if (updatedindex === quizApp.length) {
@@ -74,6 +76,7 @@ function App() {
     document.querySelectorAll('.optionBox').forEach((option) => {
       option.style.backgroundColor = '';
     });
+    
     if (SelectedValue === answerValue) {
       setmarks(marks + 5)
     }
@@ -107,6 +110,7 @@ function App() {
     }
   }
   function handleclick(e) {
+    setSelectedOption(e.target.innerHTML);
     SelectedValue = e.target.innerHTML;
     answerValue = quizApp[index].Answer;
     document.querySelectorAll('.optionBox').forEach((option) => {
@@ -198,6 +202,7 @@ function App() {
             <div>
 
               <button className='quizbutton' id='hidebutton' onClick={() => chnagequestion(index + 1)}
+              disabled={!selectedOption}
               >Next</button>
               <button className='quizbutton hide' id='showbutton' onClick={sumbitbtn}>Submit</button>
             </div>
